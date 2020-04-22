@@ -2,8 +2,9 @@ Lang:
    prefix: "§7(§eDTC§7)"
    noPermission: "§cYou don't have permission !"
    
-   # placeholders: %command%
-   syntaxError: "§cYou must execute the command like this §7: §a%command%"
+   # placeholders: {command}
+   syntaxError: "§cYou must execute the command like this §7: §a{command}"
+   
    commandError: "§cThis argument does not exist!"
    description: "Destroy the Core Commands"
    
@@ -11,21 +12,34 @@ Lang:
    Error name: "§cAn another Core have the same name!"
    Name not found: "§cCore not found!"
    
-   # placeholders: {core}
-   title: "§cThe Core {core}"
-   
-   # placeholders: {seconds}
-   subtitle: "§cStart in {seconds} s!"
+   # placeholders: {core} {seconds} 
+   title: "§7The Core §e{core}"
+   subtitle: "§7Start in §e{seconds} §7s!"
    
    Core already start: "§cThe core is already start!"
    Core not start: "§cThe core is not start!"
    Core in game: "&cThe core is start! Stop the core first."
    Core stop: "&cThe core is stop."
    
-   # placeholders: {player}, {core}
-   # This is the message sent to the console and all the players
-   Broadcast win: "&c{player} win!"
+   # placeholders: {prefix}, {player}, {core}
+   # This is the message sent to all the players when player win
+   Broadcast win: "{prefix} &6{player} win &7{core}!"
    
-   # placeholders: {player}, {core}, {points}
-   #This is the message sent to the console and all the players excepting the one who broke a piece
-   Break piece: "&eSomeone destroy a piece of {core}. §c{points} left!"
+   # placeholders: {prefix}, {player}, {core}, {life}, {life_max}
+   # This is the message sent to all the players when player break a piece
+   Break piece: "{prefix} &7{player} destroy a piece of {core}. &e{life}&7/&e{life_max}&7!"
+   
+   # placeholders: {prefix}, {core}, {button}
+   # This is the message sent to all the players when Core start
+   Public start message: "{prefix} &7The core &6{core}&7 is starting... {button} &7for show Core infos!"
+   Show button: "&8[Click]"
+   
+   # placeholders: {prefix}, {core}, {x}, {y}, {z}, {life}, {life_max}
+   # Stats Command messages | Permission : DTC.stats
+   Line 1: "&7&m            &r {prefix}&7&m            "
+   Line 2: "&6{core} : {symbol} {state}"
+   Line 3: "&7Location: {x}, {y}, {z}"
+   Line 4: "&7Core life &e{life}&7/&e{life_max}"
+   
+   Holo: "&7{core} Start in {seconds} s!"
+   Holo line 2: "&7Core life &e{life}&7/&e{life_max}"
